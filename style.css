@@ -75,6 +75,8 @@ main .botones button:nth-child(2),
     color: #0A3871;
 }
 
+
+
 #copiar{
     display: none;
 }
@@ -95,6 +97,10 @@ main .botones button:nth-child(2),
     flex-direction: column;
 }
 
+#contenido #resultado{
+    max-height: 480px;
+    overflow-y: auto;
+}
 
 #error {
     text-align: center;
@@ -181,11 +187,11 @@ main .botones button:nth-child(2),
     }
     #contenido #resultado{
         display: none;
-        height: 60%;
+        height: 650px;
     }
     #copiar{
-        position: relative;
-        bottom: -450px;
+        position: sticky;
+        top: 420px;
     }
     #error, #error img{
         display: block;
