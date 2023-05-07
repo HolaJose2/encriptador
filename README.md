@@ -1,2 +1,3 @@
-# portafolio
-Visualiza mi portafolio: <a href = "https://holajose2.github.io/portafolio/">Portafolio - Encriptador<a>
+# Encriptador
+
+Visita mi Portafolio: <a href="https://holajose2.github.io/encriptador/">Encriptador de texto<a>
