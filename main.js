@@ -18,17 +18,13 @@ const llaves = {
 }
 
 
-
 function encriptarFrase(event){
     let frase = texto.value
     frase = frase.toLowerCase()
-    console.log(frase)
     event.preventDefault();
-    if (frase.length == 0 || /^\s+$/.test(frase)){
 
-        document.querySelector('.desencriptado').style.display = "flex"
-        document.getElementById('contenido').style.display = "none"
-        document.getElementById('error').style.display = "block"
+    if (frase.length == 0 || /^\s+$/.test(frase)){
+        alert("El campo no puede estar vacio!")
     }
     else{
         frase = frase.split("")
@@ -40,11 +36,11 @@ function encriptarFrase(event){
             }
         }
         frase = frase.join("")
-        document.querySelector('.desencriptado').style.display = "block"
-        document.getElementById('contenido').style.display = "block"
+        
+        document.querySelectorAll('.mensajeEncriptado').forEach(elemento => {elemento.style.display="block"})
         document.getElementById('error').style.display = "none"
-        document.getElementById('copiar').style.display = "block"
-        document.getElementById('resultado').style.display = "block"
+        document.getElementById('contenido').style.display = "flex"    
+
 
         resultado.innerHTML = frase
         texto.value = ""
@@ -58,18 +54,15 @@ function desencriptarFrase(event){
     frase = frase.toLowerCase()
     event.preventDefault();
     if (frase.length == 0 || /^\s+$/.test(frase)){
-        document.querySelector('.desencriptado').style.display = "flex"
-        document.getElementById('contenido').style.display = "none"
-        document.getElementById('error').style.display = "block"    
+        alert("El campo no puede estar vacio!")   
     }
     else{
         frase = frase.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
 
-        document.querySelector('.desencriptado').style.display = "block"
-        document.getElementById('contenido').style.display = "block"
+        document.querySelectorAll('.mensajeEncriptado').forEach(elemento => {elemento.style.display="block"})
         document.getElementById('error').style.display = "none"
-        document.getElementById('copiar').style.display = "block"
-        document.getElementById('resultado').style.display = "block"
+        document.getElementById('contenido').style.display = "flex"    
+
 
         resultado.innerHTML = frase
 

@@ -16,26 +16,29 @@
             <img src="images/Vector.png" alt="">
         </div>
         <form action="">
-
             <div class="box-texto">
                 <textarea id="texto" placeholder="Ingrese el texto aqui"></textarea>
             </div>
-            <span class="ayuda">
-                <img src="images/bi_exclamation-circle-fill.png" alt="">
-                Solo letras minúsculas y sin acentos
-            </span>
-            <div class="botones">
-                <button id="encriptar">Encriptar</button>
-                <button id="desencriptar">Desencriptar</button>
+            <div>
+
+                <span class="ayuda">
+                    <img src="images/bi_exclamation-circle-fill.png" alt="">
+                    Solo letras minúsculas y sin acentos
+                </span>
+                <div class="botones">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
             </div>
         </form>
 
         <div class="container">
 
-            <div class="desencriptado">
+            <div class="desencriptado mensajeEncriptado">
+
                 <div id="contenido">
-                    <p id="resultado"></p>
-                    <button id="copiar">Copiar</button>
+                    <p id="resultado" class="mensajeEncriptado"></p>
+                    <button id="copiar" class="mensajeEncriptado">Copiar</button>
                 </div>
 
                 <div id="error">
